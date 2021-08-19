@@ -1,0 +1,73 @@
+.search-bar {
+  margin: 50px auto;
+  left: 0;
+}
+h1 {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+h2 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+h3 {
+  position: fixed;
+  top: 20px;
+  text-align: left;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+h4 {
+  font-family: lobster;
+  font-size: 50px;
+  margin-bottom: -20px;
+}
+
+ul {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.backimg {
+  background: url(../images/weather.jpeg);
+  height: 330px;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-size: cover;
+}
+.card-title {
+  font-family: lobster;
+  text-align: center;
+}
+.card-text {
+  font-size: 20px;
+  text-align: center;
+}
+.weather-app {
+  border: 1px solid;
+  border-radius: 20px;
+  height: 750px;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+}
+.card {
+  border: 1px solid;
+}
+.card-group {
+  margin: 20px;
+}
+.links {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 20px;
+  padding: 0;
+}

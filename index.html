@@ -2,9 +2,136 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>Weather App</title>
   </head>
-  <body></body>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+    rel="stylesheet"
+  />
+
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <div class="backimg">
+          <form id="search-form">
+            <input
+              type="city"
+              placeholder="Search City"
+              class="search-bar"
+              id="city-input"
+              autofocus="off"
+            />
+            <input type="submit" value="search"/ class="btn-primary">
+            <button class="btn-success">Current</button>
+          </form>
+          <br />
+
+          <h1 id="city">Edmonton</h1>
+          <h2>
+            <span id="temperature"> 23 </span>
+            <span>
+              <a href="#" class="links" id="celcius-link">°C</a> |
+              <a href="#" class="links" id="fahrenheit-link">°F</a>
+            </span>
+          </h2>
+          <h3 id="date">Tuesday 12:30</h3>
+          <h4>5 Day Forcast</h4>
+          <ul>
+            <li>Humidity: <span id="humidity">70</span>%</li>
+            <li>Sunrise: <span id="sunrise">7:05</span>am</li>
+            <li>Sunset: <span id="sunset">9:00</span>pm</li>
+          </ul>
+
+          <div class="card-group" style="height: 18rem">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Monday</h5>
+                <p class="card-text">
+                  <br />
+                  ☀️
+                  <br />
+                  10°C
+                  <br />
+                  <br />
+                  6°C
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tuesday</h5>
+                <p class="card-text">
+                  <br />
+                  ☀️
+                  <br />
+                  10°C
+                  <br />
+                  <br />
+                  6°C
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Wednesday</h5>
+                <p class="card-text">
+                  <br />
+                  ☀️
+                  <br />
+                  10°C
+                  <br />
+                  <br />
+                  6°C
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Thrusday</h5>
+                <p class="card-text">
+                  <br />
+                  ☀️
+                  <br />
+                  10°C
+                  <br />
+                  <br />
+                  6°C
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Friday</h5>
+                <p class="card-text">
+                  <br />
+                  ☀️
+                  <br />
+                  10°C
+                  <br />
+                  <br />
+                  6°C
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>Coded by The Myth</p>
+
+    <script src="src/script.js"></script>
+  </body>
 </html>
