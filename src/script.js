@@ -18,8 +18,10 @@ function getNewTime(date) {
     "Saturday",
   ];
   let day = days[dayIndex];
+
   return `${day}, ${hours}:${minutes}`;
 }
+
 function searchCity(city) {
   let apiKey = "6dfa8826ffc57f6f6137d36396323455";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -31,8 +33,6 @@ function displayWeatherCondition(response) {
     response.data.main.temp
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#sunrise").innerHTML = response.data.sys.sunrise;
-  document.querySelector("#sunset").innerHTML = response.data.sys.sunset;
 }
 function handleSubmit(event) {
   event.preventDefault();
@@ -44,7 +44,7 @@ function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   let temperature = temperatureElement.innerHTML;
-  temperatureElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
 }
 
 function convertToCelcius(event) {
@@ -56,16 +56,20 @@ function convertToCelcius(event) {
 
 function displayTemperature(response) {}
 
+//getNewTime
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = getNewTime(currentTime);
 
+//searchCity & handlesumbit
 let searchFrom = document.querySelector("#search-form");
 searchFrom.addEventListener("submit", handleSubmit);
 
+//convert to °F
 let fahrenheitlink = document.querySelector("#fahrenheit-link");
 fahrenheitlink.addEventListener("click", convertToFahrenheit);
 
+//convert to °C
 let celciuslink = document.querySelector("#celcius-link");
 celciuslink.addEventListener("click", convertToCelcius);
 
