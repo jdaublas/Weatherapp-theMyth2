@@ -33,27 +33,35 @@
               class="search-bar"
               id="city-input"
               autofocus="off"
+              autocomplete="off"
             />
-            <input type="submit" value="search"/ class="btn-primary">
-            <button class="btn-success">Current</button>
+            <input type="submit" value="search" class="btn-primary" />
           </form>
           <br />
 
-          <h1 id="city">Edmonton</h1>
+          <h1 id="city"></h1>
           <h2>
-            <span id="temperature"> 23 </span>
+            <span class="weather-image">
+              <img src="." alt="raining" id="image" />
+            </span>
+            <span id="temperature"></span>
             <span>
-              <a href="#" class="links" id="celcius-link">°C</a> |
+              <a href="#" class="links" id="celcius-link" id="active">°C</a> |
               <a href="#" class="links" id="fahrenheit-link">°F</a>
             </span>
           </h2>
-          <h3 id="date">Tuesday 12:30</h3>
+          <h3 id="date"></h3>
           <h4>5 Day Forcast</h4>
           <ul>
             <li>Humidity: <span id="humidity"></span>%</li>
+            <li>
+              Condition:
+              <span id="description" class="weather-description"></span>
+            </li>
+            <li>Wind: <span id="wind"></span> Km/h</li>
           </ul>
 
-          <div class="card-group" style="height: 18rem">
+          <div class="card-group" style="height: 10rem">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Monday</h5>
@@ -128,11 +136,11 @@
         </div>
       </div>
     </div>
-    <p>
+    <small>
       <a href="https://github.com/jdaublas/Weatherapp-theMyth2">
-        Coded by The Myth</a
+        First Code by Joveth Daublas</a
       >
-    </p>
+    </small>
 
     <script src="src/script.js"></script>
   </body>

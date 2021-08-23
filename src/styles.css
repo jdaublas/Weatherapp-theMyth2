@@ -3,20 +3,19 @@
   left: 0;
 }
 h1 {
-  color: white;
+  color: black;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 h2 {
   font-size: 80px;
   margin-bottom: 20px;
-  color: white;
+  color: black;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 h3 {
-  position: fixed;
   top: 20px;
   text-align: left;
-  color: white;
+  color: black;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 h4 {
@@ -34,15 +33,6 @@ ul {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.backimg {
-  background: url(../images/weather.jpeg);
-  height: 330px;
-  max-width: 800px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 20px;
-  background-size: cover;
-}
 .card-title {
   font-family: lobster;
   text-align: center;
@@ -66,8 +56,20 @@ ul {
   margin: 20px;
 }
 .links {
-  color: white;
+  color: black;
   font-size: 40px;
-  margin-bottom: 20px;
+
   padding: 0;
+  text-decoration: none;
+}
+
+.weather-description {
+  text-transform: capitalize;
+}
+.active:hover {
+  text-decoration: none;
+}
+.active {
+  color: black;
+  cursor: default;
 }
