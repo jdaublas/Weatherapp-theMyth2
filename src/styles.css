@@ -63,7 +63,6 @@ ul {
 .links {
   color: black;
   font-size: 40px;
-
   padding: 0;
   text-decoration: none;
 }
@@ -77,4 +76,8 @@ ul {
 .active {
   color: black;
   cursor: default;
+}
+
+.weather-image {
+  filter: brightness(50%);
 }
