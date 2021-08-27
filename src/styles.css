@@ -84,7 +84,7 @@ ul {
 }
 
 .weather-image {
-  filter: brightness(50%);
+  filter: brightness(90%);
 }
 
 .image {
@@ -99,6 +99,7 @@ ul {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
+  filter: brightness(90%);
 }
 
 .weather-forecast-date {
