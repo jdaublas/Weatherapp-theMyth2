@@ -27,7 +27,11 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-
+function getForecast(coordinates) {
+  let apiKey = "6dfa8826ffc57f6f6137d36396323455";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -49,6 +53,7 @@ function displayWeatherCondition(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = response.data.wind.speed;
+  getForecast(response.data.coord);
 }
 
 function convertToFahrenheit(event) {
@@ -68,7 +73,8 @@ function convertToCelcius(event) {
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
@@ -113,4 +119,3 @@ let celciuslink = document.querySelector("#celcius-link");
 celciuslink.addEventListener("click", convertToCelcius);
 
 searchCity("El Salvador");
-displayForecast();
