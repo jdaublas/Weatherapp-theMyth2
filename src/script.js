@@ -68,6 +68,31 @@ function convertToCelcius(event) {
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <img
+                src="https://openweathermap.org/img/wn/10n@2x.png"
+                alt=""
+                width="45"
+              />
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">10°C, </span>
+
+                <span class="weather-forecast-temperature-min">6°C</span>
+              </div>
+              </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let celciusTemperature = null;
 
 //getNewTime
@@ -88,3 +113,4 @@ let celciuslink = document.querySelector("#celcius-link");
 celciuslink.addEventListener("click", convertToCelcius);
 
 searchCity("El Salvador");
+displayForecast();
