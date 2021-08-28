@@ -89,7 +89,6 @@ function formatForecastDate(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="card-group">`;
   let forecast = response.data.daily;
@@ -124,6 +123,10 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function otherWorkButton() {
+  let pagebutton = document.getElementById("button");
+  pagebutton.click();
+}
 let celciusTemperature = null;
 
 //getNewTime
@@ -144,3 +147,6 @@ let celciuslink = document.querySelector("#celcius-link");
 celciuslink.addEventListener("click", convertToCelcius);
 
 searchCity("El Salvador");
+
+let button = document.querySelector("#button");
+button.addEventListener("click", otherWorkButton);
