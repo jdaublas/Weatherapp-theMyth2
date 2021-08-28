@@ -41,7 +41,7 @@ ul {
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 625px;
   margin: 30px auto;
 }
 .weather-app {
@@ -99,7 +99,6 @@ ul {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
-  filter: brightness(90%);
 }
 
 .weather-forecast-date {
