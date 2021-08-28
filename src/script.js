@@ -79,7 +79,7 @@ function formatForecastDate(timestamp) {
   let days = [
     "Monday",
     "Tuesday",
-    "Wednesay",
+    "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
@@ -106,7 +106,7 @@ function displayForecast(response) {
                   forecastDay.weather[0].icon
                 }@2x.png"
                 alt=""
-                width="45"
+                width="48"
               />
               <div class="weather-forecast-temperature">
                 <span class="weather-forecast-temperature-max">${Math.round(
